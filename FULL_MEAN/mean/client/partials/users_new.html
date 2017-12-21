@@ -1,0 +1,26 @@
+<div ng-init="UC.index()">
+
+    <form>
+      Name:<input type="text" ng-model="UC.newUser.name">
+      <br>
+      Email:<input type="text" ng-model="UC.newUser.email">
+      <br>
+      <input type="submit" ng-click="UC.create(UC.newUser)" value="Create User">
+
+    </form>
+
+
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+      </tr>
+      <tr ng-repeat="user in UC.users">
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+      </tr>
+    </table>
+
+
+
+</div>
